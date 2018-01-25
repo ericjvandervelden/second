@@ -1,11 +1,9 @@
 pipeline {
-    //agent { docker 'maven:3.3.9' }
-		agent any
+    agent { docker 'maven:3.3.9' }
     stages {
         stage('build') {
             steps {
-                //bash 'mvn --version'
-								echo 'Build'
+                sh 'mvn --version'
             }
         }
     }
