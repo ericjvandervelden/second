@@ -10,6 +10,7 @@ pipeline {
 										echo "Multiline shell steps work too"
 										ls -alh
 										echo $$
+										echo $$
 								'''
             }
         }
