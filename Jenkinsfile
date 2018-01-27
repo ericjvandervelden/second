@@ -2,22 +2,14 @@ pipeline {
     // agent { docker 'maven:3.3.9' }
 		agent any
     stages {
-        stage('build') {
+        stage('deploy') {
             steps {
-                sh 'mvn --version;echo $$'
-								sh ' echo "Hello World";echo $$'
-								sh '''
-										echo "Multiline shell steps work too"
-										ls -alh
-										echo $$
-										echo $$
-								'''
+							retry(3){
+								sh './flakey-deploy.sh'
+							}
+							timeout(time:3,unit:'MINUTES'){
+								sh './heath-check.sh'
             }
         }
-				stage('test'){
-					steps{
-						sh 'echo "test"'
-					}
-				}
     }
 }
