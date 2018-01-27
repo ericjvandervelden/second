@@ -26,5 +26,6 @@ pipeline {
 						echo 'This will run only if the status of the pipeline has changed'
 						echo 'for example if the pipeline was previously failing but now is successful'
 					}
+			}
     }
 }
