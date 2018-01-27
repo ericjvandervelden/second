@@ -1,2 +1,2 @@
 echo "health-check"
-sleep 1
+sleep 4 
