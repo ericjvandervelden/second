@@ -8,7 +8,7 @@ pipeline {
 								sh './flakey-deploy.sh'
 							}
 							timeout(time:3,unit:'MINUTES'){
-								sh './heath-check.sh'
+								sh './health-check.sh'
 							}
             }
         }
