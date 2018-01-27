@@ -5,7 +5,7 @@ pipeline {
         stage('deploy') {
             steps {
 							retry(3){
-								sh 'echo "Fail";exit 1'
+								sh 'echo "Fail";exit 0'
 							}
             }
         }
