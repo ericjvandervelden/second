@@ -8,11 +8,11 @@ pipeline {
 								sh './run-smoke-tests'
             }
         }
-        stage('sanity check') {
-            steps {
-							 input 'Does the staging environment looks OK?'	
-            }
-        }
+//        stage('sanity check') {
+ //           steps {
+	//						 input 'Does the staging environment looks OK?'	
+   //         }
+    //    }
         stage('deploy - production') {
             steps {
 								sh './deploy production'
