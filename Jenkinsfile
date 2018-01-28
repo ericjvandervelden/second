@@ -18,7 +18,7 @@ pipeline {
 				echo 'This will only if successful'
 			}
 			failure{
-				echo 'This will run only if failed'
+				//echo 'This will run only if failed'
 				mail to:'ericjvandervelden@gmail.com',
 				subject:"Failed pipeline:${currentBuild.fullDisplayName}",
 				body:"Something is wrong with ${env.BUILD_URL}"
