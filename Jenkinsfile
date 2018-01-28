@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('deploy - staging') {
             steps {
-								sh './deploy staging'
-								sh './run-smoke-tests'
+								sh './deploy.sh staging'
+								sh './run-smoke-tests.sh'
             }
         }
 //        stage('sanity check') {
@@ -15,7 +15,7 @@ pipeline {
     //    }
         stage('deploy - production') {
             steps {
-								sh './deploy production'
+								sh './deploy.sh production'
             }
         }
 		}
